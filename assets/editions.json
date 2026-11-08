@@ -1,0 +1,441 @@
+{
+  "2026-11-08": {
+    "dateString": "Sunday, November 8, 2026",
+    "editionNumber": "090",
+    "tokens": [
+      {
+        "name": "Bitcoin Hyper ($HYPER)",
+        "chain": "Bitcoin L2 / Solana VM Execution",
+        "stage": "Bridge Launch & Mainnet Token Generation Event (TGE)",
+        "narrative": "Massive institutional and retail interest bridging Bitcoin liquidity to sub-second Solana VM execution. Whitelist mint concluded oversubscribed by 480%.",
+        "footprint": {
+          "accumulation": "5 labeled smart money wallets added $420k liquidity in 12h; 0 net CEX deposits recorded.",
+          "concentration": "Ex-liquidity pool, top 10 hold 14.2% of supply (healthy decentralized distribution)."
+        },
+        "watch": "Watch the bridge contract deposit volume. Look for sustained order book bids defending the $0.0042 support level after first-hour gas fees settle."
+      },
+      {
+        "name": "AlphaPepe ($ALPE)",
+        "chain": "Ethereum / Arbitrum",
+        "stage": "AlphaSwap AI DEX Pre-Release",
+        "narrative": "Viral cultural meme coin pairing with autonomous AI portfolio rebalancing agents. High-velocity Telegram volume exceeding 25,000 active traders.",
+        "footprint": {
+          "accumulation": "3 Tier-1 Smart DEX Traders deployed $215k on Uniswap v3 pool; net CEX outflow was 88%.",
+          "concentration": "Top 10 hold 11.8% of supply with dev wallet 100% time-locked on Team Finance."
+        },
+        "watch": "Monitor the 5-minute candlestick breakout above $0.000085. Tighten trailing stops if liquidity depth falls under $300k."
+      },
+      {
+        "name": "Maxi Doge ($MAXI)",
+        "chain": "Solana",
+        "stage": "Raydium Pool Migration & Trending Breakout",
+        "narrative": "Leading meme token on Solana with $9.8M 24-hour DEX volume. Massive organic rotation from legacy dog tokens into high-beta volatility.",
+        "footprint": {
+          "accumulation": "Whale 0x94b... accumulated 85M $MAXI over 8 discrete transactions; 0 centralized exchange deposits.",
+          "concentration": "Ex-Raydium AMM vault, top 10 holders control 16.5% of total supply."
+        },
+        "watch": "Watch for sudden 15% depth dumps on Raydium. If order book holds the $0.0019 floor through 09:30 AM EST, prepare for a secondary squeeze to $0.0028."
+      },
+      {
+        "name": "Liquid Chain ($LIQUID)",
+        "chain": "Arbitrum Orbit L3",
+        "stage": "Initial DEX Offering (IDO) Claim Window",
+        "narrative": "Zero-knowledge cross-chain liquidity sync protocol backed by Tier-2 market maker syndicates. TVL pre-deposits reached $16M in 36 hours.",
+        "footprint": {
+          "accumulation": "4 institutional Arkham-tagged venture wallets locked $650k into staking vaults in past 18 hours.",
+          "concentration": "Top 10 hold 17.1% (all vested on 12-month linear smart contracts)."
+        },
+        "watch": "Watch claim velocity at 08:00 AM EST. Enter on a confirmed 15-minute consolidation when circulating market cap holds between $38M and $42M."
+      },
+      {
+        "name": "Hunter AI ($HUNTR)",
+        "chain": "BNB Chain / BSC",
+        "stage": "Public DEX Listing Debut",
+        "narrative": "High-frequency autonomous execution agent scouting presale memepools in real time. Very high social sentiment with 40k+ verified testnet users.",
+        "footprint": {
+          "accumulation": "2 verified smart DEX wallets added $140k in PancakeSwap v3; zero exchange inflows.",
+          "concentration": "Top 10 wallets hold 13.9% of total circulating supply."
+        },
+        "watch": "Verify PancakeSwap router pair tax remains at 0% buy and 0% sell. Look for bids clustering around $0.0125."
+      }
+    ],
+    "nfts": [
+      {
+        "name": "Primate Legends",
+        "mintInfo": "Supply: 3,003 | Chain: Ethereum Mainnet",
+        "narrative": "16-bit cybernetic pixel art and anime aesthetic. Whitelist round oversubscribed 6:1 with strong demand among high-profile PFP collectors.",
+        "footprint": {
+          "accumulation": "6 elite collectors (owning 10+ CryptoPunks / Bored Apes) minted maximum allocation; secondary sweeps totaled 24 ETH in 6h.",
+          "concentration": "Unique owner ratio is exceptionally high at 82% across 2,400+ distinct wallets."
+        },
+        "watch": "Watch Blur/OpenSea secondary listing ratio. If listings remain under 3.8% of supply, floor will surge from 0.08 ETH toward 0.22 ETH."
+      },
+      {
+        "name": "Glyph Visages",
+        "mintInfo": "Supply: 500 | Chain: Ethereum",
+        "narrative": "High-end generative typographic constraint art using pure on-chain SVG code. Curated by influential digital art houses.",
+        "footprint": {
+          "accumulation": "Generative Art DAO treasury swept 18 items off the 0.35 ETH floor; zero immediate re-listings.",
+          "concentration": "Top 10 holders control 15% of supply, primarily recognized generative art archivists."
+        },
+        "watch": "Watch gas price wars when public Dutch auction hits the 0.25 ETH baseline. Sweep bids are primed at 0.30 ETH."
+      },
+      {
+        "name": "Mintegra (Keccak-256 Gems)",
+        "mintInfo": "Proof-of-Work Browser Mint | Chain: Arbitrum",
+        "narrative": "Revolutionary dynamic proof-of-work mint where collectors mine rare gemstones in-browser with zero pre-mine and zero VC allocations.",
+        "footprint": {
+          "accumulation": "Mining node count crossed 12,500 active IP clusters; high-volume miner wallets holding 100% of mined assets without secondary dumping.",
+          "concentration": "Top 10 miners hold only 8.4% of total supply."
+        },
+        "watch": "Track difficulty adjustment algorithm. When network difficulty jumps >20%, secondary market floor price tracks compute cost directly upward."
+      },
+      {
+        "name": "Schallern Founder Collection",
+        "mintInfo": "Supply: 1,200 | Chain: Base",
+        "narrative": "Interactive competitive Web3 physics game where precision coin-throwing unlocks daily passive token yield pools.",
+        "footprint": {
+          "accumulation": "Gaming guild wallets have locked 310 passes into non-custodial arenas; floor supply compressed by 40% in 12h.",
+          "concentration": "Top 10 wallets account for 12.3% of collection."
+        },
+        "watch": "Look for floor supply dipping below 45 items on OpenSea Base. Instant buy signals trigger when floor approaches 0.05 ETH."
+      },
+      {
+        "name": "Hood Junkies",
+        "mintInfo": "Supply: 4,444 | Chain: Solana",
+        "narrative": "Gritty urban digital identity with integrated deflationary burning mechanics and high-traction streetwear brand licensing.",
+        "footprint": {
+          "accumulation": "Whale swept 85 items via Tensor in under 15 minutes; secondary volume passed 3,200 SOL.",
+          "concentration": "Ex-staking contract, top 10 hold 9.8% of minted tokens."
+        },
+        "watch": "Watch Tensor swap bid depth. If bids maintain 1.8 SOL support into early US morning hours, prepare for a run to 3.2 SOL."
+      }
+    ],
+    "gamePlan": [
+      {
+        "step": "01. Pre-Market Liquidity & Wallet Screening (08:00 - 09:00 AM EST)",
+        "desc": "Preload DEX Screener, DEXTools and EVM block explorers. Configure priority fees and gas limits on burner wallets before the session."
+      },
+      {
+        "step": "02. Order Sniping & MEV Protection Rules",
+        "desc": "Avoid market buys in the first 90 seconds after LP launch. Wait for the first one-minute consolidation candle with confirmed volume."
+      },
+      {
+        "step": "03. Scalp Entry Laddering",
+        "desc": "Split allocation into three bullets: 40% limit order on the initial retest of breakout support, 30% on verified 5-minute volume expansion, and 30% held in USDC for flush dips."
+      },
+      {
+        "step": "04. Strict Profit Scaling & Stop-Loss Discipline",
+        "desc": "At 2x, take 50% of the initial principal off the table. Move the stop to break-even and trail the remaining position by 15%."
+      }
+    ],
+    "watchOut": [
+      {
+        "title": "TRAP 1: The 'CEX Dump Setup' (Automated Exclusion)",
+        "warning": "A sudden inflow of > 1% circulating supply into Binance, Coinbase, or Bybit hot wallets within 12 hours of an unlock or listing. This indicates early seed investors or team wallets preparing to dump liquid spot inventory onto retail."
+      },
+      {
+        "title": "TRAP 2: Wash-Trading Bounces (Automated Exclusion)",
+        "warning": "Disqualify candidates with volume growth above 300% when unique active wallet (UAW) growth does not rise proportionally over the same observation period."
+      },
+      {
+        "title": "TRAP 3: Sybil Sniper Bundles (Automated Exclusion)",
+        "warning": "20+ fresh wallets funded with identical ETH/SOL amounts minutes before a DEX launch by the deployer address. These bundled wallets snipe the entire bottom bonding curve and dump immediately as public volume enters."
+      },
+      {
+        "title": "Contract Risk: Unverified Liquidity Locks",
+        "warning": "Never enter any token unless 100% of the initial liquidity pool is provably time-locked on Team Finance, UNCX, or Streamflow for a minimum of 6 months. Unlocked LP means instant rug risk."
+      }
+    ]
+  },
+  "2026-11-07": {
+    "dateString": "Saturday, November 7, 2026",
+    "editionNumber": "089",
+    "tokens": [
+      {
+        "name": "MemeToro ($MT)",
+        "chain": "BNB Chain / BSC",
+        "stage": "AI Launchpad Presale Stage 9",
+        "narrative": "High social volume on X and Telegram. Presale stage 9 absorbed $4.2M with zero whale allocation vesting cliffs.",
+        "footprint": {
+          "accumulation": "4 smart money wallets added $180k liquidity in 12h; 0 net CEX deposits.",
+          "concentration": "Ex-liquidity pool, top 10 hold < 18% of total supply."
+        },
+        "watch": "Watch the liquidity pool lock verification at 09:30 AM EST. Target $0.0034 entry if initial bonding curve dips."
+      },
+      {
+        "name": "Hyperliquid ($HYPE)",
+        "chain": "Custom L1 / DeFi Perps",
+        "stage": "Mainnet Ecosystem Expansion",
+        "narrative": "Massive institutional OTC volume surging ahead of token unlock parameters. On-chain perp open interest crossed historical highs.",
+        "footprint": {
+          "accumulation": "Net whale accumulation crossed $1.4M over 24h; CEX outflows at 74%.",
+          "concentration": "Top 10 hold 15.4% of non-foundation supply."
+        },
+        "watch": "Check 4-hour funding rates. If funding stays neutral or negative despite price surge, expect a short squeeze on spot open."
+      },
+      {
+        "name": "LiquidChain ($LIQUID)",
+        "chain": "Arbitrum Orbit L3",
+        "stage": "Public Token Generation Event (TGE)",
+        "narrative": "Aggregates fragmented liquidity across 14 chains using zero-knowledge messaging.",
+        "footprint": {
+          "accumulation": "3 VC-associated wallets added $310k liquidity; 0 CEX transfers.",
+          "concentration": "Top 10 hold 16.8% under verifiable multisig timelocks."
+        },
+        "watch": "Monitor Uniswap v3 fee tiers. Favorable entry when FDV consolidates between $45M–$52M range."
+      },
+      {
+        "name": "SuiAura ($AURA)",
+        "chain": "Sui Network",
+        "stage": "DEX Listing Squeeze",
+        "narrative": "Ecosystem liquidity incentives unlocked. TVL surged $18M in 12 hours.",
+        "footprint": {
+          "accumulation": "2 Tier-1 DEX traders added $120k; whale ratio 68% buy side.",
+          "concentration": "Top 10 hold 14.1% of circulating supply."
+        },
+        "watch": "Watch resistance at $1.20; look for high order depth defending $0.98."
+      },
+      {
+        "name": "NeuralFi ($NEUR)",
+        "chain": "Solana",
+        "stage": "Token Presale 3",
+        "narrative": "On-chain autonomous AI agents trading high-frequency perps.",
+        "footprint": {
+          "accumulation": "Whale 0x5a1... accumulated $95k in USDC swap; zero token sales.",
+          "concentration": "Top 10 hold 12.5% of total supply."
+        },
+        "watch": "Track GitHub code releases and Raydium pool depth prior to trading."
+      }
+    ],
+    "nfts": [
+      {
+        "name": "Primate Legends",
+        "mintInfo": "Supply: 3,003 | Chain: Ethereum",
+        "narrative": "16-bit cybernetic pixel art. Whitelist oversubscribed 6:1 by notable web3 collectors.",
+        "footprint": {
+          "accumulation": "4 high-PnL wallets minted max limit; zero immediate secondary listings.",
+          "concentration": "Top 10 hold 11.2% of collection."
+        },
+        "watch": "Secondary listing ratio. If less than 4% are listed on OpenSea/Blur after reveal, expect a run to 0.18 ETH floor."
+      },
+      {
+        "name": "Glyph Visages",
+        "mintInfo": "Supply: 500 | Chain: Ethereum",
+        "narrative": "High-end generative typographic constraint art using pure SVG on-chain code.",
+        "footprint": {
+          "accumulation": "Sweeps by 2 curated generative art DAOs totaling 14.5 ETH.",
+          "concentration": "Top 10 hold 14% of collection."
+        },
+        "watch": "Low supply means even 15 buys can double the baseline floor."
+      },
+      {
+        "name": "Hood Cabals & Caravan RH",
+        "mintInfo": "Supply: 7,777 | Chain: Robinhood L2 Ecosystem",
+        "narrative": "Flagship gaming identity collection for the newly launched consumer L2 ecosystem.",
+        "footprint": {
+          "accumulation": "1,200 unique minting wallets in first 2 hours; whale ratio balanced.",
+          "concentration": "Top 10 hold 7.5% of minted supply."
+        },
+        "watch": "Gas consumption on the L2 bridge. Wait for initial gas wars to cool before buying secondary dips."
+      },
+      {
+        "name": "Schallern Founder Collection",
+        "mintInfo": "Supply: 1,200 | Chain: Base",
+        "narrative": "Integrates on-chain physics coin-throwing mechanics that unlock daily passive token rewards.",
+        "footprint": {
+          "accumulation": "Gaming guild passes swept by 3 distinct whale wallets.",
+          "concentration": "Top 10 hold 13.4% of supply."
+        },
+        "watch": "Founder wallet lockup disclosures and in-game token staking contract audits."
+      },
+      {
+        "name": "Mintegra (Keccak-256 Gems)",
+        "mintInfo": "Dynamic Proof-of-Work Mint | Chain: Arbitrum",
+        "narrative": "Dynamic proof-of-work mint where collectors mine gemstones in browser with zero pre-mine.",
+        "footprint": {
+          "accumulation": "Over 8,000 active browser workers connected within 24 hours.",
+          "concentration": "Top 10 hold 6.9% of minted items."
+        },
+        "watch": "Secondary floor price tracks compute cost directly upward as difficulty escalates."
+      }
+    ],
+    "gamePlan": [
+      {
+        "step": "01. Pre-Market Liquidity Scan",
+        "desc": "Review Asian session order flow. Check Bitcoin dominance. Screen DEXScreener for early liquidity additions."
+      },
+      {
+        "step": "02. Slippage & Contract Integrity Check",
+        "desc": "Run newly minted contracts through security audit. Enforce maximum 1.5% slippage on DEX swaps."
+      },
+      {
+        "step": "03. Scalp Entry Laddering",
+        "desc": "Do not market-buy at open. Place split limit orders: 40% support retest, 30% volume breakout, 30% flash dips."
+      },
+      {
+        "step": "04. Take-Profit Discipline",
+        "desc": "Sell 50% at 1.75x to recover initial capital. Let the remaining 50% ride with a break-even stop loss."
+      }
+    ],
+    "watchOut": [
+      {
+        "title": "TRAP 1: The 'CEX Dump Setup'",
+        "warning": "A sudden inflow of > 1% circulating supply into Binance/Coinbase hot wallets indicates an impending dump."
+      },
+      {
+        "title": "TRAP 2: Wash-Trading Bounces",
+        "warning": "Rapid volume spikes without a corresponding increase in unique active wallet addresses (UAW)."
+      },
+      {
+        "title": "TRAP 3: Sybil Sniper Bundles",
+        "warning": "20+ fresh wallets funded minutes before launch by the deployer address to artificially inflate metrics."
+      },
+      {
+        "title": "MEV Sandwich Bots",
+        "warning": "Use private RPC endpoints when trading new listings to avoid frontrunning."
+      }
+    ]
+  },
+  "2026-11-06": {
+    "dateString": "Friday, November 6, 2026",
+    "editionNumber": "088",
+    "tokens": [
+      {
+        "name": "SuiAura ($AURA)",
+        "chain": "Sui Network",
+        "stage": "DEX Listing",
+        "narrative": "Ecosystem liquidity incentives unlocked. TVL surged $18M in 12 hours.",
+        "footprint": {
+          "accumulation": "3 smart money wallets added $110k liquidity; 0 CEX transfers.",
+          "concentration": "Top 10 hold 14.5% of total supply."
+        },
+        "watch": "Resistance at $1.20; look for strong buyer bids at $1.02."
+      },
+      {
+        "name": "PepeQuantum ($PQ)",
+        "chain": "Ethereum",
+        "stage": "Fair Launch",
+        "narrative": "Viral meme narrative targeting AI quantum supremacy hype.",
+        "footprint": {
+          "accumulation": "Whale 0x11a... added 45 ETH into initial liquidity pool.",
+          "concentration": "Top 10 hold 16.2% of supply."
+        },
+        "watch": "Liquidity lock duration on UNCX before taking positions."
+      },
+      {
+        "name": "Aptos Prime ($APTX)",
+        "chain": "Aptos",
+        "stage": "Bridge Incentive",
+        "narrative": "Zero slippage cross-chain swaps enabled for USDC.",
+        "footprint": {
+          "accumulation": "Smart DEX accumulation totaled $280k in 24 hours.",
+          "concentration": "Top 10 hold 13.8% of supply."
+        },
+        "watch": "Whale transaction volume on Pontem and LiquidSwap DEXs."
+      },
+      {
+        "name": "NeuralFi ($NEUR)",
+        "chain": "Solana",
+        "stage": "Token Presale 3",
+        "narrative": "On-chain autonomous AI agents trading high-frequency perps.",
+        "footprint": {
+          "accumulation": "Presale round filled with 80% individual retail wallets.",
+          "concentration": "Top 10 hold 12.1% of supply."
+        },
+        "watch": "GitHub code releases and audit verification certificates."
+      },
+      {
+        "name": "KantoMon ($KNT)",
+        "chain": "Base",
+        "stage": "Gaming Alpha",
+        "narrative": "Micro-cap gaming token with playable browser demo.",
+        "footprint": {
+          "accumulation": "Base ecosystem whale accumulated 1.2M tokens.",
+          "concentration": "Top 10 hold 15.0% of supply."
+        },
+        "watch": "Active player wallet metrics on BaseScan."
+      }
+    ],
+    "nfts": [
+      {
+        "name": "CyberRonin Clan",
+        "mintInfo": "5,555 on Ethereum",
+        "narrative": "Community-driven anime PFP collection with 3D metaverse avatars.",
+        "footprint": {
+          "accumulation": "4 NFT alpha caller wallets minted maximum allocation.",
+          "concentration": "Top 10 hold 8.9% of collection."
+        },
+        "watch": "Diamond-hand staking index and secondary sales on Blur."
+      },
+      {
+        "name": "Voxel Relics",
+        "mintInfo": "2,000 on Solana",
+        "narrative": "Pixel artifacts giving bonus yields in Solana gaming arenas.",
+        "footprint": {
+          "accumulation": "Solana gaming guild swept 120 items off floor.",
+          "concentration": "Top 10 hold 11.5% of collection."
+        },
+        "watch": "Magic Eden launchpad status and verified escrow contracts."
+      },
+      {
+        "name": "Null Pointers",
+        "mintInfo": "404 on Arbitrum",
+        "narrative": "Experimental ERC-404 hybrid token-NFT standard mint.",
+        "footprint": {
+          "accumulation": "2 Arbitrum whales locked 15% of pool in liquidity.",
+          "concentration": "Top 10 hold 14.8% of supply."
+        },
+        "watch": "DEX liquidity pool pairing and rebase stability."
+      },
+      {
+        "name": "Chrono Punks",
+        "mintInfo": "10,000 on Bitcoin L2",
+        "narrative": "First animated ordinal collection bridging to EVM.",
+        "footprint": {
+          "accumulation": "Ordinal whales bridged 450 items to Arbitrum.",
+          "concentration": "Top 10 hold 9.2% of collection."
+        },
+        "watch": "Inscription ordinal transfer delays and bridge confirmation times."
+      },
+      {
+        "name": "Aero Guild Passes",
+        "mintInfo": "888 on Base",
+        "narrative": "Lifetime zero-fee trading passes on decentralized perpetuals.",
+        "footprint": {
+          "accumulation": "DeFi perp traders swept 50 passes within 1 hour.",
+          "concentration": "Top 10 hold 13.0% of supply."
+        },
+        "watch": "Floor listing velocity and trading fee discount activation."
+      }
+    ],
+    "gamePlan": [
+      {
+        "step": "01. Defend Gains",
+        "desc": "Prioritize risk reduction into weekend liquidity shrinkage."
+      },
+      {
+        "step": "02. Stablecoin Reserves",
+        "desc": "Keep 35% in liquid USDC/USDT for unannounced Sunday stealth mints."
+      }
+    ],
+    "watchOut": [
+      {
+        "title": "TRAP 1: The 'CEX Dump Setup'",
+        "warning": "Watch for early morning CEX deposits from early seed investors."
+      },
+      {
+        "title": "TRAP 2: Wash-Trading Bounces",
+        "warning": "Circular volume without UAW growth is a trap."
+      },
+      {
+        "title": "TRAP 3: Sybil Sniper Bundles",
+        "warning": "Multi-wallet bot launches will dump on retail."
+      },
+      {
+        "title": "Weekend Liquidity Drain",
+        "warning": "Market makers pull bids from 4pm Friday, causing wider spreads and slippage spikes."
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+#risk-modal{width:min(610px,94vw);max-height:88vh;overflow:auto;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,4vw,32px)}
+#risk-modal::backdrop{background:rgba(6,11,8,.82)}
+#close-audit{float:right}
+#audit-form{display:grid;gap:14px}
+#audit-form label{display:grid;gap:5px}
+#audit-form input,#audit-form select{width:100%;min-width:0}
+.audit-actions,.dispatch-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#audit-result{overflow-wrap:anywhere}
+.asset-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:15px;margin:16px 0}
+.asset-fields article{border:1px solid var(--line);padding:14px}
+.asset-fields h4,.asset-fields p{margin:0 0 8px}
+.asset-fields p{font-size:.94rem}
+#dispatch-status{display:block;font-size:.9rem;margin:.5em 0}

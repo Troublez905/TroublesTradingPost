@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-labelledby="title desc">
+  <title id="title">Troubles Trading Post</title>
+  <desc id="desc">A stepped ivory and amber TTP maker's mark on a charcoal square.</desc>
+  <rect x="1" y="1" width="70" height="70" rx="12" fill="#181916" stroke="#524e41" stroke-width="2"/>
+  <g transform="translate(2 0) skewX(-8)">
+    <path fill="#f6efdc" d="M13 21h18v7h-6v24h-7V28h-5z"/>
+    <path fill="#f6efdc" d="M33 17h18v7h-6v24h-7V24h-5z"/>
+    <path fill="#ffc454" fill-rule="evenodd" d="M48 29h12l5 5v8l-5 5h-5v9h-7zm7 6v6h3l1-1v-4l-1-1z"/>
+  </g>
+</svg>

@@ -1,0 +1,5 @@
+.feed{display:flex;align-items:center;gap:14px;margin:auto;width:min(1160px,92%);border-bottom:1px solid var(--line);padding:8px 0;font:12px 'Courier New',monospace}
+.feed strong{white-space:nowrap}.feed b{font-size:10px;color:var(--gold)}.feed-window{overflow:hidden;flex:1}.feed-window div{display:flex;width:max-content;animation:tape 25s linear infinite}.feed-window span{padding-right:56px;color:var(--mint)}.feed button{font:inherit;padding:4px 8px}
+@keyframes tape{to{transform:translateX(-50%)}}
+.hero:has(~ #futures:not([hidden])){display:none}#futures:not([hidden]){margin-top:36px}
+@media(max-width:620px){header{height:auto;min-height:85px;flex-wrap:wrap;padding:10px 0;gap:8px}nav{flex-wrap:wrap;gap:16px}.feed{gap:6px}.hero:has(~ #futures:not([hidden])){display:none}#futures{margin-top:24px}}
