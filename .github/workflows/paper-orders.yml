@@ -1,0 +1,35 @@
+name: Community paper exchange
+on:
+  issues:
+    types: [opened]
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/paper-orders.yml
+      - competition/**
+  workflow_dispatch:
+    inputs:
+      quote_test:
+        description: Verify production quotes without placing an order
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  exchange:
+    if: github.event_name != 'issues' || startsWith(github.event.issue.title, '[Paper order] ')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Process competition ledger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          QUOTE_TEST: ${{ inputs.quote_test }}
+        run: python3 competition/worker.py
