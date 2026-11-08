@@ -1,10 +1,62 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101310"><title>Troubles Trading Post | Dispatch desk</title><link rel="icon" href="assets/logo.svg"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="risk.css"><link rel="stylesheet" href="futures.css"><link rel="stylesheet" href="desk.css"><script defer src="risk.js"></script><script defer src="futures.js"></script><script defer src="app.js"></script><script defer src="desk.js"></script></head>
-<body><header><a class="brand" href="#dispatch"><img src="assets/logo.svg" alt=""><span>Troubles<br>Trading Post</span></a><nav aria-label="Main navigation"><a href="#dispatch">Dispatch</a><a href="#archive">Archive</a><a href="#scanner">Scanner</a><a href="#futures">Futures</a></nav><span class="station">TORONTO / ET</span></header>
-<aside class="feed" aria-label="Simulated whale radar"><strong>Whale radar <b>SIM</b></strong><div class="feed-window"><div id="tape"><span>Nansen simulation &middot; HYPER &middot; $68,500 smart-money inflow</span><span>Arkham simulation &middot; HYPER &middot; $120,000 whale swap</span></div></div><button id="pause-feed" aria-label="Pause whale radar">Pause</button></aside>
-<main><section class="hero"><div class="hero-copy"><small><i></i> ON-CHAIN RESEARCH DESK</small><h1>The Night<br><em>Dispatch.</em></h1><p>Token watchlists, NFT signals and field notes from the 1 AM desk.</p></div><div class="art" aria-hidden="true"><canvas id="radar"></canvas><span>FIG. 01 &nbsp; / &nbsp; SIGNAL ARRAY</span></div></section>
-<section id="dispatch"><div class="sectionhead"><div><small>01 &nbsp;/&nbsp; DISPATCH DESK</small><h2>Market watchlist</h2></div><label>Edition <select id="edition"></select></label></div><div class="bar"><div id="tabs" aria-label="Watchlist category"><button aria-pressed="true">Tokens</button><button aria-pressed="false">NFTs</button></div><span>ARCHIVED RESEARCH</span></div><div id="rows" aria-live="polite">Loading edition&hellip;</div><div id="notes"></div></section>
-<section id="archive" hidden><small>02 &nbsp;/&nbsp; RESEARCH LIBRARY</small><h2>Dispatch archive</h2><label>Search editions <input id="query" type="search" placeholder="Date, token or collection"></label><div id="matches"></div></section>
-<section id="scanner" hidden><small>03 &nbsp;/&nbsp; RESEARCH TOOLS</small><h2>Trap scanner</h2><p>Record the checks you verified for a contract. This manual checklist does not query a blockchain.</p><div id="checks"></div><output id="progress"></output></section>
-<section id="futures" hidden aria-label="Futures research"></section>
-</main><footer><strong>Troubles Trading Post</strong><span>Research desk &middot; Informational use only</span><a href="https://sites.google.com/view/troubles-trading-post">Original site &#8599;</a></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="Troubles Trading Post research dispatches, futures research, contract checks and paper trading.">
+  <title>Troubles Trading Post | Dispatch desk</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="risk.css">
+  <link rel="stylesheet" href="futures.css">
+  <link rel="stylesheet" href="paper.css">
+  <link rel="stylesheet" href="leaderboard.css">
+  <link rel="stylesheet" href="resources.css">
+  <link rel="stylesheet" href="desk.css">
+  <script defer src="risk.js"></script>
+  <script defer src="futures.js"></script>
+  <script defer src="paper.js"></script>
+  <script defer src="leaderboard.js"></script>
+  <script defer src="resources.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="desk.js"></script>
+</head>
+<body>
+  <a class="skip" href="#workspace">Skip to workspace</a>
+  <header>
+    <a class="brand" href="#dispatch"><img src="assets/logo.svg" alt=""><span>Troubles<br>Trading Post</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#dispatch">Dispatch</a><a href="#futures">Futures</a><a href="#scanner">Scanner</a>
+      <a href="#paper">Paper trading</a><a href="#leaderboard">Leaderboard</a><a href="#archive">Archive</a><a href="#resources">Resources</a>
+    </nav>
+    <span class="station">Toronto / ET</span>
+  </header>
+  <aside class="feed" aria-label="Simulated whale radar">
+    <strong>Whale radar <b>SIM</b></strong>
+    <div class="feed-window"><div id="tape"><span>Nansen simulation &middot; HYPER &middot; $68,500 smart-money inflow</span><span>Arkham simulation &middot; HYPER &middot; $120,000 whale swap</span></div></div>
+    <button id="pause-feed" aria-label="Pause whale radar">Pause</button>
+  </aside>
+  <main id="workspace" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><small><i></i> On-chain research desk</small>
+        <h1 id="hero-title">The Night<br><em>Dispatch.</em></h1>
+        <p>Token watchlists, NFT signals and field notes from the 1 AM desk.</p>
+        <div class="hero-links"><a href="#archive">Browse the archive &nearr;</a><a href="#paper">Open paper desk &rarr;</a></div>
+      </div>
+      <div class="art" aria-hidden="true"><canvas id="radar"></canvas></div>
+    </section>
+    <section id="dispatch"><div class="sectionhead"><div><small>Dispatch desk</small><h2>Market watchlist</h2></div><label>Edition <select id="edition"></select></label></div>
+      <div class="bar"><div id="tabs" aria-label="Watchlist category"><button aria-pressed="true">Tokens</button><button aria-pressed="false">NFTs</button></div><span>Archived research</span></div>
+      <div id="rows" aria-live="polite">Loading edition&hellip;</div><div id="notes"></div>
+    </section>
+    <section id="archive" hidden><h2>Dispatch archive</h2><label>Search editions <input id="query" type="search" placeholder="Date, token or collection"></label><div id="matches"></div></section>
+    <section id="scanner" hidden><h2>Trap scanner</h2><p>Record the checks you verified for a contract. This manual checklist does not query a blockchain.</p><div id="checks"></div><output id="progress"></output></section>
+    <section id="futures" hidden aria-label="Futures research"></section>
+    <section id="paper" hidden aria-label="Paper trading"></section>
+    <section id="leaderboard" hidden aria-label="Leaderboard"></section>
+    <section id="resources" hidden aria-label="Resources"></section>
+  </main>
+  <footer><strong>Troubles Trading Post</strong><span>Research desk &middot; Informational use only</span><a href="https://sites.google.com/view/troubles-trading-post">Original site &#8599;</a></footer>
+</body>
+</html>

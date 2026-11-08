@@ -102,7 +102,7 @@ function archive() {
   if (!matches.length) byId('matches').textContent = 'No matching editions.';
 }
 function route() {
-  const active = ['archive','scanner','futures'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'dispatch';
+  const active = ['archive','scanner','futures','paper','leaderboard','resources'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'dispatch';
   for (const link of document.querySelectorAll('nav a')) {
     if (!link.hash || !byId(link.hash.slice(1))) continue;
     const current = link.hash === '#'+active;
@@ -110,6 +110,8 @@ function route() {
     if (current) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
   }
   if (active === 'futures') window.refreshFutures?.();
+  if (active === 'paper') window.openPaperDesk?.();
+  if (active === 'leaderboard') window.openLeaderboard?.();
 }
 window.addEventListener('hashchange',route);
 route();
@@ -155,11 +157,11 @@ function drawGlobe() {
     }
     ctx.stroke();
   }
-  ctx.strokeStyle = '#8daf88'; ctx.lineWidth = .8;
+  ctx.strokeStyle = '#52dddf'; ctx.lineWidth = .8;
   for (let lat=-80;lat<=80;lat+=10) curve(Array.from({length:181},(_,i)=>project(lat,i*2-180)));
   for (let lon=-180;lon<180;lon+=10) curve(Array.from({length:91},(_,i)=>project(i*2-90,lon)));
   ctx.beginPath();ctx.arc(0,0,r,0,Math.PI*2);ctx.stroke();
-  ctx.rotate(-.22);ctx.strokeStyle='#d6aa56';ctx.beginPath();ctx.ellipse(0,0,r*1.44,r*.4,0,0,Math.PI*2);ctx.stroke();
-  for(const angle of [.42,3.68]){ctx.fillStyle='#ffd283';ctx.beginPath();ctx.arc(r*1.44*Math.cos(angle),r*.4*Math.sin(angle),4,0,Math.PI*2);ctx.fill();}
+  ctx.rotate(-.22);ctx.strokeStyle='#c095ff';ctx.beginPath();ctx.ellipse(0,0,r*1.44,r*.4,0,0,Math.PI*2);ctx.stroke();
+  for(const angle of [.42,3.68]){ctx.fillStyle='#fff26c';ctx.beginPath();ctx.arc(r*1.44*Math.cos(angle),r*.4*Math.sin(angle),4,0,Math.PI*2);ctx.fill();}
 }
 new ResizeObserver(drawGlobe).observe(byId('radar'));

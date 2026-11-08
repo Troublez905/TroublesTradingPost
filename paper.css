@@ -1,0 +1,27 @@
+.paper-card,.paper-account{border:1px solid var(--line);background:linear-gradient(145deg,#191b20,#101115);padding:clamp(14px,2vw,24px)}
+.paper-book{border-top:1px solid var(--line);margin-top:18px;padding-top:15px}
+.paper-book h3{margin:0 0 3px}
+.paper-book table{border-collapse:collapse;width:100%;text-align:right;font-size:clamp(.72rem,1.4vw,.86rem);font-variant-numeric:tabular-nums}
+.paper-book caption{text-align:left;color:var(--muted);margin-bottom:9px}
+.paper-book th,.paper-book td{padding:5px 3px;border-bottom:1px solid var(--line)}
+.paper-book th{font-weight:500;color:var(--muted)}
+.paper-book td:nth-child(2){color:#4be0e2}.paper-book td:nth-child(3){color:#ff7187}
+.paper-market{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:16px;margin-top:16px;align-items:start}
+.paper-controls,.paper-chart-head,.paper-setup,.paper-balances,.paper-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.paper-chart-head{justify-content:space-between;font-size:.79rem;color:var(--muted)}
+.paper-chart-head strong{font-size:clamp(26px,4vw,50px);color:var(--ink)}
+.paper-chart{margin-top:22px}.paper-chart svg{display:block;width:100%;margin:12px 0}
+.paper-ticket{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.paper-ticket h3,.paper-ticket button,.paper-estimate{grid-column:1/-1;margin:0}
+.paper-ticket label:not([hidden]),.paper-setup label{display:grid;gap:6px}
+.paper-ticket select,.paper-ticket input{min-width:0;width:100%;max-width:100%}
+.paper-ticket button,.paper-setup button{background:var(--gold);color:#172018;font-weight:700}
+.paper-ticket button:disabled{opacity:.55;cursor:default}
+.paper-estimate,.paper-row span,.paper-empty{font-size:.85rem;color:var(--muted)}
+.paper-row{border-bottom:1px solid var(--line);padding:12px 0}
+.paper-row button{margin-left:auto}
+.paper-balances span{display:grid;color:var(--muted);font-size:.82rem;gap:4px}
+.paper-balances b{color:var(--ink);font-size:1.1rem}
+.paper-account .paper-balances{gap:clamp(18px,5vw,70px)}
+.paper-setup{align-items:end}.paper-notice{color:var(--gold)}
+@media(max-width:760px){.paper-market{grid-template-columns:1fr}.paper-row{align-items:flex-start}.paper-row strong{flex-basis:100%}}

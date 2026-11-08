@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '23 */3 * * *'
 
 permissions:
   contents: read
@@ -25,8 +27,9 @@ jobs:
       - name: Prepare public files
         run: |
           mkdir public
-          cp index.html style.css app.js desk.css desk.js risk.css risk.js futures.css futures.js public/
+          cp index.html style.css app.js desk.css desk.js risk.css risk.js futures.css futures.js paper.js paper.css resources.js resources.css leaderboard.js leaderboard.css public/
           cp -R assets public/
+          python3 tools/news.py public/assets/news.json
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

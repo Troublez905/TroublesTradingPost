@@ -1,0 +1,10 @@
+.lb-dialog{color:var(--ink);margin:20px 0}
+.lb-head,.lb-controls,.lb-order{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.lb-head{justify-content:space-between}
+.lb-dialog table{border-collapse:collapse;width:100%;font:inherit}
+.lb-dialog th,.lb-dialog td{text-align:left;padding:10px 4px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.lb-dialog td:last-child,.lb-dialog th:last-child{text-align:right}
+.lb-order{align-items:end;margin-bottom:15px}
+.lb-order label{display:grid;gap:5px}
+.lb-order input{width:100px}
+.lb-positions{padding-left:20px}

@@ -22,6 +22,12 @@ The workflow publishes only the static interface and assets. Run the webhook ser
 
 ## Research tools
 
+**Paper trading** lets you fund a practice account, act on a futures reading or enter a personal idea, then review simulated results. Personal practice history is stored in the current browser. Use the **Leaderboard** for the shared ranked competition. Its order entry, execution timing and account rules are shown on that screen.
+
+**Resources** lists timestamped headlines from CoinDesk and Decrypt and links to research tools. The Pages build refreshes the RSS snapshot on deployment and every three hours on the scheduled workflow. Each source shows its own last successful fetch time.
+
+See [ten proposed features and their implementation prompts](Docs/01-option-advice-for-ttp.md).
+
 Open **Futures** to request a fresh one-hour market snapshot. Each available contract identifies the exchange and observation time. Exchange availability depends on the reader's network and region. Use the chart link to inspect the same instrument.
 
 The header whale radar replays two labeled examples from the webhook demo. The scanner evaluates observations supplied by the reader or a test fixture. The November editions are sample editorial data. For webhook ingestion, ranking and the scheduled snapshot workflow, see the [backend guide](backend/README.md).

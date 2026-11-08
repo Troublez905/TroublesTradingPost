@@ -1,0 +1,52 @@
+const {test} = require("node:test");
+const assert = require("node:assert/strict");
+const {account,place,settle,close,reserve,summary,funding,depthPrice,liquidationPrice} = require("./paper.js");
+const now = 1000;
+const order = {id:"p1",side:"Long",symbol:"BTCUSDT",margin:100,leverage:2,type:"Market",exchange:"Binance USD-M",origin:"Own idea"};
+const book = {symbol:"BTCUSDT",source:"Binance USD-M",price:100,asOf:now,asks:[[101,1],[102,10]],bids:[[99,10],[98,5]]};
+const approx = (actual,expected) => assert.ok(Math.abs(actual-expected)<1e-8,`${actual} vs ${expected}`);
+
+test("custom starting cash and volume-weighted market fill with capped isolated losses",()=>{
+  const a=account("Guest",4321.55,now);
+  place(a,order,book,now);
+  const [p]=a.positions;
+  approx(p.entry,200/(1+99/102));
+  approx(a.cash,4321.55-100.1);
+  approx(summary(a,now).equity,4321.45);
+  assert.ok(liquidationPrice(p,now)>50);
+  settle(a,{...book,price:1},now);
+  assert.equal(a.positions.length,0);
+  assert.equal(a.journal[0].reason,"Liquidated");
+  approx(a.journal[0].net,-100.1);
+});
+test("limit reservation, venue pin, full-size fill and net cash after costs",()=>{
+  const a=account("Tester",1000,now), o={...order,type:"Limit",limit:98};
+  place(a,o,book,now);
+  assert.equal(a.orders.length,1);
+  approx(a.cash+reserve(o),1000);
+  const cheaper={...book,price:97,asks:[[97,20]],bids:[[96,20]]};
+  settle(a,{...cheaper,source:"Bybit Linear"},now);
+  assert.equal(a.positions.length,0);
+  settle(a,cheaper,now);
+  assert.equal(a.orders.length,0);
+  const p=a.positions[0];
+  assert.equal(p.entry,97);
+  const afterFunding=28800001;
+  approx(funding(p,afterFunding),0.02);
+  close(a,p.id,100,afterFunding,"Manual close");
+  approx(a.journal[0].net,(100-97)*p.qty-p.entryFee-0.02-100*p.qty*0.0005);
+  approx(summary(a,afterFunding).equity,1000+a.journal[0].net);
+});
+test("short entry sells bids, short funding credit, stale/depth/margin rejection is atomic",()=>{
+  const a=account("Tester",1000,now), o={...order,side:"Short"};
+  place(a,o,book,now);
+  approx(a.positions[0].entry,99);
+  assert.ok(funding(a.positions[0],28800001)<0);
+  assert.ok(liquidationPrice(a.positions[0],now)>99);
+  const before=JSON.stringify(a);
+  assert.throws(()=>place(a,o,book,now+31000),/fresh/);
+  assert.throws(()=>place(a,{...o,margin:1000},book,now),/cash/);
+  assert.throws(()=>place(a,o,{...book,bids:[[100,0.5]]},now),/depth/);
+  assert.equal(JSON.stringify(a),before);
+  approx(depthPrice([[101,1],[103,2]],2,false,0,true),102);
+});

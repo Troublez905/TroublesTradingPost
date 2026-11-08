@@ -1,0 +1,52 @@
+{
+  "CoinDesk": {
+    "checked": "2026-11-08T07:38:23.094140+00:00",
+    "articles": [
+      {
+        "title": "Binance users in some European countries told to pull crypto before fees kick in, with accounts closing by year end",
+        "url": "https://www.coindesk.com/business/2026/11/07/binance-users-in-some-european-countries-told-to-pull-crypto-before-fees-kick-in-with-accounts-closing-by-year-end",
+        "published": "2026-11-07T19:13:16+00:00"
+      },
+      {
+        "title": "U.S. Treasury moves to cut off crypto exchange MEXC over $16 billion in alleged illicit flows",
+        "url": "https://www.coindesk.com/business/2026/11/07/u-s-treasury-moves-to-cut-off-crypto-exchange-mexc-over-usd16-billion-in-alleged-illicit-flows",
+        "published": "2026-11-07T17:36:46+00:00"
+      },
+      {
+        "title": "Gnosis Pay breach exposes card numbers, home addresses and linked crypto wallets",
+        "url": "https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets",
+        "published": "2026-11-07T16:51:00+00:00"
+      },
+      {
+        "title": "Apple, Meta reject OKX\u2013ICE tokenized stock plans, leaving crypto firms as the ones to watch",
+        "url": "https://www.coindesk.com/policy/2026/11/06/apple-meta-reject-okx-ice-tokenized-stock-plans-leaving-crypto-firms-as-the-ones-to-watch",
+        "published": "2026-11-06T20:09:18+00:00"
+      }
+    ]
+  },
+  "Decrypt": {
+    "checked": "2026-11-08T07:38:23.181161+00:00",
+    "articles": [
+      {
+        "title": "Apple Completes the Set: Every Magnificent Seven Stock Opts Out of OKX-ICE Venue",
+        "url": "https://decrypt.co/382768/apple-meta-every-magnificent-seven-stock-opts-out-okx-ice-venue",
+        "published": "2026-11-07T17:01:03+00:00"
+      },
+      {
+        "title": "AI Chip Stocks Bounce After Global Rout\u2014But Is the Bubble Starting to Burst?",
+        "url": "https://decrypt.co/382770/ai-chip-stocks-bounce-global-rout-bubble-starting-burst",
+        "published": "2026-11-07T16:01:02+00:00"
+      },
+      {
+        "title": "Sony Axing Game Discs Will Have Outsized Impact on Low-Income Gamers, Experts Say",
+        "url": "https://decrypt.co/382714/sony-axing-game-discs-will-have-outsized-impact-on-low-income-gamers-experts-say",
+        "published": "2026-11-07T14:01:02+00:00"
+      },
+      {
+        "title": "Treasury Cuts Crypto Exchange MEXC Off From US Financial System",
+        "url": "https://decrypt.co/382758/treasury-cuts-off-crypto-exchange-mexc-us-financial-system",
+        "published": "2026-11-06T21:06:03+00:00"
+      }
+    ]
+  }
+}

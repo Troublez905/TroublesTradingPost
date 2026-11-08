@@ -66,6 +66,17 @@
       <div class="fut-analysis"><small>60-MINUTE RESEARCH BIAS</small><h3>${stale ? "Stale data" : bias}</h3>
       <p>${stale ? "Refresh to calculate a current reading." : "Hour change " + percent(move) + ". Last close " + price(closes[59]) + " USDT. The 10-minute average is " + price(fast) + " and the 30-minute average is " + price(slow) + "."}</p>
       <a href="${provider.chart(symbol)}" target="_blank" rel="noopener noreferrer">Open ${provider.name} chart &#8599;</a></div>`;
+    if (!stale && bias !== "Neutral") {
+      const trial = document.createElement("button");
+      trial.type = "button";
+      trial.textContent = "Practice this " + bias.toLowerCase();
+      trial.onclick = () => {
+        if (Date.now() - end >= 2 * minute) { refresh(); return; }
+        window.paperIdea = {symbol,bias,source:provider.name,observedAt:new Date(end).toISOString()};
+        location.hash = "paper";
+      };
+      result.querySelector(".fut-analysis").append(trial);
+    }
   }
 
   function mount(panel) {
