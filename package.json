@@ -1,0 +1,23 @@
+{
+  "name": "troubles-trading-post",
+  "version": "1.0.0",
+  "description": "Troubles Trading Post - On-chain research desk with token watchlists, NFT signals and paper trading",
+  "main": "app.js",
+  "scripts": {
+    "test": "node lab.test.cjs && node monitor.test.cjs && node paper.test.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Troublez905/TroublesTradingPost.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Troublez905/TroublesTradingPost/issues"
+  },
+  "homepage": "https://github.com/Troublez905/TroublesTradingPost#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
