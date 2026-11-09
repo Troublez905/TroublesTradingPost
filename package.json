@@ -1,0 +1,23 @@
+{
+  "name": "troubles-trading-post",
+  "version": "1.0.0",
+  "description": "[Open the trading desk](https://troublez905.github.io/TroublesTradingPost/) · [Report an issue or suggest a feature](https://github.com/Troublez905/TroublesTradingPost/issues)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Troublez905/TroublesTradingPost.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Troublez905/TroublesTradingPost/issues"
+  },
+  "homepage": "https://github.com/Troublez905/TroublesTradingPost#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
