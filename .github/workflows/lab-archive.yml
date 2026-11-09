@@ -1,0 +1,35 @@
+name: Archive futures signal observations
+on:
+  schedule:
+    - cron: '37 10 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: research-archive
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Backfill completed UTC days
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin lab-data; then
+            git fetch --depth=1 origin refs/heads/lab-data
+            git worktree add --detach "$RUNNER_TEMP/archive" FETCH_HEAD
+          else
+            git worktree add --detach "$RUNNER_TEMP/archive" HEAD
+          fi
+          python3 tools/lab_collect.py --out "$RUNNER_TEMP/archive/assets/lab"
+          cd "$RUNNER_TEMP/archive"
+          git config user.name github-actions
+          git config user.email github-actions@users.noreply.github.com
+          git add assets/lab
+          if ! git diff --cached --quiet; then git commit -m 'Archive completed market observations'; fi
+          git push origin HEAD:refs/heads/lab-data

@@ -19,6 +19,21 @@
     panel.querySelector('aside').append(p);
   }
   const stamp = iso => new Date(iso).toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'});
+  const network = document.createElement('section');
+  const title = document.createElement('h3');
+  title.textContent = 'Ethereum network snapshot';
+  const blockInfo = document.createElement('p');
+  network.append(title,blockInfo);
+  panel.querySelector('aside').append(network);
+  async function loadNetwork() {
+    const response = await fetch('assets/network.json',{cache:'no-cache'});
+    if (!response.ok) throw Error('Snapshot unavailable');
+    const block = await response.json();
+    blockInfo.append(link('Finalized block '+block.height.toLocaleString(),'https://etherscan.io/block/'+block.height),
+      document.createElement('br'),block.transactions+' transactions · '+block.baseFeeGwei.toPrecision(3)+' gwei base fee',
+      document.createElement('br'),block.provider+' · block time '+stamp(block.time));
+  }
+  loadNetwork().catch(()=>{blockInfo.textContent='Block snapshot unavailable.';});
   async function load() {
     const response = await fetch('assets/news.json',{cache:'no-cache'});
     if (!response.ok) throw Error('Headline cache unavailable');

@@ -102,18 +102,29 @@ function archive() {
   if (!matches.length) byId('matches').textContent = 'No matching editions.';
 }
 function route() {
-  const active = ['archive','scanner','futures','paper','leaderboard','resources'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'dispatch';
+  const active = ['archive','scanner','futures','paper','leaderboard','resources','lab','monitor'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'dispatch';
   for (const link of document.querySelectorAll('nav a')) {
     if (!link.hash || !byId(link.hash.slice(1))) continue;
     const current = link.hash === '#'+active;
     byId(link.hash.slice(1)).hidden = !current;
-    if (current) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
+    if (current) {
+      link.setAttribute('aria-current','page');
+      document.title = link.textContent.trim() + ' | Troubles Trading Post';
+    } else {
+      link.removeAttribute('aria-current');
+    }
   }
   if (active === 'futures') window.refreshFutures?.();
   if (active === 'paper') window.openPaperDesk?.();
   if (active === 'leaderboard') window.openLeaderboard?.();
+  if (active === 'lab') window.openLab?.();
+  if (active === 'monitor') window.openMonitor?.();
 }
 window.addEventListener('hashchange',route);
+document.querySelector('.skip').addEventListener('click',event => {
+  event.preventDefault();
+  byId('workspace').focus();
+});
 route();
 const refreshCandidates = setupScanner();
 picker.onchange = () => { render(); refreshCandidates(editions[picker.value]); };

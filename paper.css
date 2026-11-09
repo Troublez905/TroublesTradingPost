@@ -25,3 +25,13 @@
 .paper-account .paper-balances{gap:clamp(18px,5vw,70px)}
 .paper-setup{align-items:end}.paper-notice{color:var(--gold)}
 @media(max-width:760px){.paper-market{grid-template-columns:1fr}.paper-row{align-items:flex-start}.paper-row strong{flex-basis:100%}}
+.paper-guard:not([hidden]),.paper-review:not([hidden]){display:flex;align-items:end;gap:14px;flex-wrap:wrap;border:1px solid var(--line);padding:18px;margin-block:20px}
+.paper-guard h3,.paper-review h3,.paper-guard p{width:100%;margin:0}
+.paper-guard label,.paper-review label{display:grid;gap:5px;max-width:100%}
+.paper-review select,.paper-review textarea{max-width:100%;min-width:0}
+.paper-review textarea{background:#15191e;color:inherit;border:1px solid var(--line);min-height:50px;font:inherit}
+.paper-funding,.paper-stress{color:var(--muted);font-size:.86rem;line-height:1.6;margin:10px 0 20px}
+.paper-stress table{width:100%;font-variant-numeric:tabular-nums;text-align:right;border-collapse:collapse}
+.paper-stress caption{text-align:left}.paper-stress td,.paper-stress th{border-bottom:1px solid var(--line);padding:6px}
+.paper-markers b{font-size:.72rem;text-transform:uppercase;color:#4be0e2}.paper-markers b+b{color:#ff7187}
+.paper-plan-note{grid-column:1/-1;font-size:.82rem;margin:0;color:var(--muted)}

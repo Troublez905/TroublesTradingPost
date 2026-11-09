@@ -26,7 +26,11 @@ The workflow publishes only the static interface and assets. Run the webhook ser
 
 **Resources** lists timestamped headlines from CoinDesk and Decrypt and links to research tools. The Pages build refreshes the RSS snapshot on deployment and every three hours on the scheduled workflow. Each source shows its own last successful fetch time.
 
-See [ten proposed features and their implementation prompts](Docs/01-option-advice-for-ttp.md).
+The **Strategy lab** contains historical candle replay, a directional signal scorecard and walk-forward evaluation. **Calendar & alerts** tracks catalysts and conditional market alerts. The **Paper trading** ticket includes risk sizing, funding, depth scenarios, session limits and trade reviews.
+
+The Ethereum snapshot under **Resources** uses a finalized mainnet block. Set the optional GitHub Actions secret `ALCHEMY_API_KEY` for server-side Alchemy access. PublicNode supplies the fallback. The build publishes only the block metrics, timestamp and provider.
+
+See [the ten feature prompts and their locations](Docs/01-option-advice-for-ttp.md).
 
 Open **Futures** to request a fresh one-hour market snapshot. Each available contract identifies the exchange and observation time. Exchange availability depends on the reader's network and region. Use the chart link to inspect the same instrument.
 

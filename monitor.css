@@ -1,0 +1,8 @@
+#monitor .mon-controls,#mon-rules,#mon-events {display:flex;flex-wrap:wrap;gap:.8rem;align-items:end;margin:1rem 0}
+#monitor .mon-controls label {display:grid;gap:.4rem}
+#monitor .mon-controls label:has(input[type=checkbox]) {display:flex;align-items:center}
+#monitor .mon-controls input[type=number] {width:9rem}
+#monitor article {align-self:stretch;flex:1 1 220px;min-width:0;background:var(--panel);border:1px solid var(--line);padding:1rem;border-radius:6px}
+#monitor article h4 {font-size:1.15rem;margin:.5rem 0}
+#monitor article p,#mon-history {font-size:.9rem;overflow-wrap:anywhere}
+#monitor article a {color:var(--cyan);text-decoration:underline}

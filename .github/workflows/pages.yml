@@ -24,12 +24,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Check paper execution, research rules and alert behavior
+        run: node --test *.test.cjs
       - name: Prepare public files
         run: |
           mkdir public
           cp index.html style.css app.js desk.css desk.js risk.css risk.js futures.css futures.js paper.js paper.css resources.js resources.css leaderboard.js leaderboard.css public/
           cp -R assets public/
+          cp momentum.js lab-engine.js lab.js lab.css monitor.js monitor.css paper-tools.js public/
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          root = Path("public")
+          class CheckAssets(HTMLParser):
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  asset = attrs.get("src") if tag == "script" else attrs.get("href") if tag == "link" else None
+                  if asset and not (root / asset).is_file():
+                      raise FileNotFoundError(asset)
+          CheckAssets().feed((root / "index.html").read_text())
+          PY
           python3 tools/news.py public/assets/news.json
+      - name: Refresh public Ethereum block snapshot
+        env:
+          ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
+        run: python3 tools/network_snapshot.py public/assets/network.json
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

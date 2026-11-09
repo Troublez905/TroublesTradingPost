@@ -1,6 +1,20 @@
-# Ten next builds for Troubles Trading Post
+# Ten trading tools for Troubles Trading Post
 
-Each prompt describes one feature that can be developed and tested independently.
+| Open the tool | Features |
+| --- | --- |
+| [Paper trading](https://troublez905.github.io/TroublesTradingPost/#paper) | Stop-based sizing, funding calendar, liquidity stress tests, session limits and trade reviews |
+| [Strategy lab](https://troublez905.github.io/TroublesTradingPost/#lab) | Blind replay, signal scorecard and walk-forward strategy testing |
+| [Calendar and alerts](https://troublez905.github.io/TroublesTradingPost/#monitor) | Sourced catalysts and conditional market alerts |
+
+The original implementation prompts below describe the intended behavior and test cases.
+
+## How to interpret the results
+
+- The paper ticket sizes against a planning stop. The stop and target fields record your plan. Close or reduce the position from the desk to execute an exit.
+- The funding calendar reports exchange estimates and the most recent settlement. The paper account's execution model describes its own funding calculation.
+- The lab reconstructs one-minute observations from completed historical candles. Compare market, UTC day, horizon, sample size, fees and missing observations before interpreting a score. The archive targets days through two days ago to allow the venue to publish its daily files.
+- Alerts sample while the monitor is visible. Calendar entries link to primary sources, show verification times, and can be revised when a release moves.
+- The Binance connector confirmed the USD-M mark and funding response. Firecrawl checked the Federal Reserve schedule. The Resources Ethereum snapshot supports an optional server-side Alchemy key and identifies the provider that actually supplied each block.
 
 ### 1. Stop-based position sizing
 

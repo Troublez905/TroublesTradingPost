@@ -1,0 +1,10 @@
+#lab .lab-tabs,#lab .lab-select,#lab .lab-order{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:15px 0}
+#lab .lab-select label,#lab .lab-order label{display:grid;gap:5px}
+#lab .lab-order input{width:120px}
+#lab .lab-view{border-top:1px solid var(--line)}
+#lab .lab-chart{display:block;width:min(100%,780px);height:auto;background:repeating-linear-gradient(0deg,transparent 0 39px,#78867426 40px),#161d17;border:1px solid var(--line)}
+#lab .lab-table{overflow-x:auto;margin-top:18px}
+#lab table{border-collapse:collapse;width:100%}
+#lab th,#lab td{padding:10px 6px;text-align:left;border-bottom:1px solid var(--line)}
+#lab .lab-walk-result,#lab .lab-trade{color:var(--mint)}
+#lab button:disabled{opacity:.55;cursor:default}
