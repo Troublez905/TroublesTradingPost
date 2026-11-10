@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/Troublez905/TroublesTradingPost/issues"
   },
-  "homepage": "https://github.com/Troublez905/TroublesTradingPost#readme",
-  "dependencies": {
-    "@vercel/analytics": "^2.0.1"
-  }
+  "homepage": "https://github.com/Troublez905/TroublesTradingPost#readme"
 }
