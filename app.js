@@ -8,9 +8,11 @@ function element(tag, value, cls) {
 }
 const picker = byId('edition');
 const copyButton = element('button','Copy full post');
-const sendButton = element('button','Simulate 1 AM dispatch');
+const downloadPost = element('a','Download Markdown');
+downloadPost.hidden = true;
+copyButton.disabled = true;
 const actions = element('div','','dispatch-actions');
-actions.append(copyButton,sendButton);
+actions.append(copyButton,downloadPost);
 const dispatchStatus = element('output','');
 dispatchStatus.id = 'dispatch-status';
 dispatchStatus.setAttribute('aria-live','polite');
@@ -18,6 +20,15 @@ document.querySelector('.sectionhead').append(actions);
 document.querySelector('.sectionhead').after(dispatchStatus);
 const missing = 'Not reported in this edition.';
 function assetFields(asset) {
+  if (asset.market) {
+    const m = asset.market;
+    const number = value => typeof value === 'number' && Number.isFinite(value) ?
+      value.toLocaleString('en-US',{maximumFractionDigits:8}) : null;
+    return [['Market',[m.venue,m.product].filter(Boolean).join(' / ')],['Market window (UTC)',[m.windowStart,m.windowEnd].filter(Boolean).join(' to ')],
+      ['Open (USD)',number(m.open)],['High (USD)',number(m.high)],['Low (USD)',number(m.low)],['Close (USD)',number(m.close)],
+      ['Change',number(m.changePct) === null ? null : number(m.changePct)+'%'],['Volume (base units)',number(m.baseVolume)],
+      ['Market observations',asset.narrative],['What to watch',asset.watch]];
+  }
   const accumulation = asset.footprint?.accumulation || '';
   const concentration = asset.footprint?.concentration || '';
   return [
@@ -30,21 +41,45 @@ function assetFields(asset) {
     ['What to watch',asset.watch]
   ];
 }
-sendButton.onclick = () => {
-  const edition = editions[picker.value];
-  if (edition) dispatchStatus.textContent = 'Simulation complete for edition #' + edition.editionNumber +
-    ' / 01:00 America/Toronto / cron 0 1 * * *. No email sent.';
-};
+function webSource(raw) {
+  if (typeof raw !== 'string') return null;
+  try {
+    const url = new URL(raw);
+    return ['https:','http:'].includes(url.protocol) && !url.username && !url.password ? url.href : null;
+  } catch { return null; }
+}
+function sourceLink(label,raw) {
+  const href = webSource(raw);
+  if (!href) return element('span',label || 'Source unavailable');
+  const link = element('a',label || new URL(href).hostname);
+  link.href = href;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  return link;
+}
+function editionType(edition) { return edition.kind === 'daily' ? 'Daily dispatch' : 'Historical sample'; }
 copyButton.onclick = async () => {
   const edition = editions[picker.value];
   if (!edition) return;
-  const body = ['Troubles Trading Post | Sample edition #'+edition.editionNumber,edition.dateString];
+  const body = ['Troubles Trading Post | '+editionType(edition)+' #'+edition.editionNumber,edition.dateString];
+  if (edition.generatedAt) body.push('Generated '+edition.generatedAt);
   for (const [title, items] of [['Tokens',edition.tokens],['NFTs',edition.nfts]]) {
     body.push('',title);
-    items.forEach((item,index) => body.push('',(index+1)+'. '+item.name,...assetFields(item).map(([key,value]) => key + ': ' + (value || missing))));
+    if (!items.length) body.push(title === 'NFTs' ? edition.nftStatus || 'No NFT entries in this edition.' : 'No token entries in this edition.');
+    items.forEach((item,index) => {
+      body.push('',(index+1)+'. '+item.name,...assetFields(item).map(([key,value]) => key + ': ' + (value || missing)));
+      if (webSource(item.source?.url)) body.push((item.source.label || 'Source')+' '+webSource(item.source.url));
+    });
   }
   body.push('','Morning game plan',...edition.gamePlan.map(i => i.step+'\n'+i.desc),'','What to watch out for',
-    ...edition.watchOut.map(i => i.title+'\n'+i.warning),'','Sample research edition. Informational use only.');
+    ...edition.watchOut.map(i => i.title+'\n'+i.warning));
+  if (edition.kind === 'daily') {
+    body.push('','News',edition.newsStatus || '');
+    for (const story of edition.news || []) body.push(story.title,[story.source,story.publishedAt].filter(Boolean).join(' / '),webSource(story.url) || '');
+    body.push('','Sources');
+    for (const source of edition.sources || []) if (webSource(source.url)) body.push(source.label+' '+webSource(source.url));
+  }
+  body.push('','Informational use only.');
   try {
     await navigator.clipboard.writeText(body.join('\n'));
     dispatchStatus.textContent = 'Full dispatch copied.';
@@ -64,10 +99,19 @@ function render() {
   dispatchStatus.replaceChildren();
   const edition = editions[picker.value];
   if (!edition) return;
+  copyButton.disabled = false;
+  byId('edition-kind').textContent = editionType(edition);
+  downloadPost.hidden = true;
+  downloadPost.removeAttribute('href');
+  if (edition.kind === 'daily' && edition.postPath === 'posts/'+picker.value+'.md') {
+    downloadPost.href = edition.postPath;
+    downloadPost.download = picker.value+'.md';
+    downloadPost.hidden = false;
+  }
   const rows = edition[category].map((asset, index) => {
     const row = document.createElement('details');
     const title = document.createElement('summary');
-    title.append(element('span', String(index + 1).padStart(2,'0'), 'rank'), element('strong',asset.name), element('span',asset.chain || asset.mintInfo,'meta'));
+    title.append(element('span', String(index + 1).padStart(2,'0'), 'rank'), element('strong',asset.name), element('span',asset.market?.product || asset.chain || asset.mintInfo || '','meta'));
     row.append(title);
     const grid = element('div','','asset-fields');
     for (const [label,value] of assetFields(asset)) {
@@ -76,15 +120,37 @@ function render() {
       grid.append(card);
     }
     row.append(grid);
+    if (asset.source?.url) row.append(sourceLink(asset.source.label,asset.source.url));
     return row;
   });
   byId('rows').replaceChildren(...rows);
+  if (!rows.length) byId('rows').append(element('p', category === 'nfts' ? edition.nftStatus || 'No NFT entries in this edition.' : 'No token entries in this edition.'));
   const notes = [];
   for (const [heading, items] of [['Morning game plan',edition.gamePlan],['What to watch out for',edition.watchOut]]) {
     const panel = document.createElement('details');
     panel.append(element('summary',heading));
     for (const item of items) panel.append(element('h4',item.step || item.title),element('p',item.desc || item.warning));
     notes.push(panel);
+  }
+  if (edition.kind === 'daily') {
+    const news = document.createElement('section');
+    news.append(element('h3','News'));
+    if (edition.newsStatus) news.append(element('p',edition.newsStatus));
+    for (const story of edition.news || []) {
+      const item = element('article','');
+      item.append(sourceLink(story.title,story.url),element('p',[story.source,story.publishedAt].filter(Boolean).join(' / ')));
+      news.append(item);
+    }
+    notes.push(news);
+    const sources = element('details','');
+    sources.append(element('summary','Edition sources'));
+    if (edition.generatedAt) sources.append(element('p','Generated '+edition.generatedAt));
+    for (const source of edition.sources || []) {
+      const line = element('p','');
+      line.append(sourceLink(source.label,source.url));
+      sources.append(line);
+    }
+    notes.push(sources);
   }
   byId('notes').replaceChildren(...notes);
 }
@@ -95,7 +161,7 @@ function archive() {
     return [key,e.dateString,...e.tokens.map(x=>x.name),...e.nfts.map(x=>x.name)].join(' ').toLowerCase().includes(term);
   });
   byId('matches').replaceChildren(...matches.map(key => {
-    const result = element('button',key+'   /   Edition #'+editions[key].editionNumber,'result');
+    const result = element('button',key+'   /   '+editionType(editions[key])+' #'+editions[key].editionNumber,'result');
     result.onclick = () => { picker.value = key; picker.onchange(); location.hash = 'dispatch'; };
     return result;
   }));
@@ -136,11 +202,15 @@ buttons.forEach((button,index) => button.onclick = () => {
   render();
 });
 async function load() {
-  const response = await fetch('assets/editions.json');
+  const response = await fetch('data/archive.json',{cache:'no-cache'});
   if (!response.ok) throw Error('Edition request failed');
   editions = await response.json();
-  const dates = Object.keys(editions).sort().reverse();
-  for (const date of dates) picker.add(new Option(date + (date === dates[0] ? ' / Current edition' : ' / Archive'),date));
+  const dates = Object.keys(editions).filter(key=>/^\d{4}-\d{2}-\d{2}$/.test(key)).sort().reverse();
+  if (!dates.length) {
+    byId('rows').textContent = byId('matches').textContent = 'No editions published yet.';
+    return;
+  }
+  for (const date of dates) picker.add(new Option(date+' / '+editionType(editions[date]),date));
   render(); archive(); refreshCandidates(editions[picker.value]);
 }
 load().catch(() => { byId('rows').textContent = byId('matches').textContent = 'Could not load the dispatch archive. Reload to retry.'; });

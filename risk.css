@@ -11,3 +11,5 @@
 .asset-fields h4,.asset-fields p{margin:0 0 8px}
 .asset-fields p{font-size:.94rem}
 #dispatch-status{display:block;font-size:.9rem;margin:.5em 0}
+.dispatch-actions a,#dispatch #notes a,#dispatch #rows details>a{color:var(--mint);text-decoration:underline;text-underline-offset:3px}
+#dispatch-status textarea{display:block;width:100%;min-height:8rem;margin-top:.5rem}
