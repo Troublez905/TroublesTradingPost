@@ -26,6 +26,7 @@
   <script defer src="monitor.js"></script>
   <script defer src="lab-engine.js"></script>
   <script defer src="lab.js"></script>
+  <script defer src="mev.js"></script>
   <script defer src="app.js"></script>
   <script defer src="desk.js"></script>
 </head>
@@ -35,7 +36,7 @@
     <a class="brand" href="#dispatch"><img src="assets/logo.svg" alt=""><span>Troubles<br>Trading Post</span></a>
     <nav aria-label="Main navigation">
       <a href="#dispatch">Dispatch</a><a href="#futures">Futures</a><a href="#scanner">Scanner</a>
-      <a href="#paper">Paper trading</a><a href="#lab">Strategy lab</a><a href="#monitor">Calendar &amp; alerts</a><a href="#leaderboard">Leaderboard</a><a href="#archive">Archive</a><a href="#resources">Resources</a>
+      <a href="#paper">Paper trading</a><a href="#lab">Strategy lab</a><a href="#mev">MEV &amp; flash loans</a><a href="#monitor">Calendar &amp; alerts</a><a href="#leaderboard">Leaderboard</a><a href="#archive">Archive</a><a href="#resources">Resources</a>
     </nav>
     <span class="station">Toronto / ET</span>
   </header>
@@ -62,6 +63,21 @@
     <section id="futures" hidden aria-label="Futures research"></section>
     <section id="paper" hidden aria-label="Paper trading"></section>
     <section id="lab" hidden aria-label="Strategy lab"></section>
+    <section id="mev" hidden aria-label="MEV and flash loan practice">
+      <small>Simulated Ethereum pools</small><h2>Troubles MEV Command Center</h2>
+      <p>Practice a USDC &rarr; WETH &rarr; USDC round trip. Both pools start with 500 WETH. Each swap pays a 0.30% fee and changes the pool price.</p>
+      <form id="mev-ticket" class="lab-select">
+        <label>Practice desk<select name="mode"><option value="loan">Flash loan bot</option><option value="order">MEV transaction ordering</option></select></label>
+        <label>Test case<select name="preset"><option value="spread">Price spread</option><option value="flat">Flat market</option><option value="gas">High gas</option></select></label>
+        <label>Borrow (USDC)<input type="number" name="amount" min="1" max="1000000" step="any" value="5000" required></label>
+        <label>Pool A (USDC/WETH)<input type="number" name="buy" min="1" max="100000" step="any" value="2500" required></label>
+        <label>Pool B (USDC/WETH)<input type="number" name="sell" min="1" max="100000" step="any" value="2600" required></label>
+        <label>Loan premium (bps)<input type="number" name="premium" min="0" max="100" step="any" value="5" required></label>
+        <label>Gas cost (USDC)<input type="number" name="gas" min="0" max="10000" step="any" value="8" required></label>
+        <button type="submit">Run simulation</button>
+      </form>
+      <p id="mev-help"></p><div id="mev-results" aria-live="polite"></div>
+    </section>
     <section id="monitor" hidden aria-label="Calendar and alerts"></section>
     <section id="leaderboard" hidden aria-label="Leaderboard"></section>
     <section id="resources" hidden aria-label="Resources"></section>

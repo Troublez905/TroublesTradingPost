@@ -168,7 +168,7 @@ function archive() {
   if (!matches.length) byId('matches').textContent = 'No matching editions.';
 }
 function route() {
-  const active = ['archive','scanner','futures','paper','leaderboard','resources','lab','monitor'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'dispatch';
+  const active = ['archive','scanner','futures','paper','leaderboard','resources','lab','monitor','mev'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'dispatch';
   for (const link of document.querySelectorAll('nav a')) {
     if (!link.hash || !byId(link.hash.slice(1))) continue;
     const current = link.hash === '#'+active;

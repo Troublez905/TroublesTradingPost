@@ -32,6 +32,7 @@ jobs:
           cp index.html style.css app.js desk.css desk.js risk.css risk.js futures.css futures.js paper.js paper.css resources.js resources.css leaderboard.js leaderboard.css public/
           cp -R assets data posts public/
           cp momentum.js lab-engine.js lab.js lab.css monitor.js monitor.css paper-tools.js public/
+          cp mev.js public/
           python3 - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
