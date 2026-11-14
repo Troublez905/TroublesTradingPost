@@ -1293,5 +1293,219 @@
         "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?start=2026-11-12T00%3A00%3A00Z&end=2026-11-13T00%3A00%3A00Z&granularity=86400"
       }
     ]
+  },
+  "2026-11-14": {
+    "dateString": "Saturday, November 14, 2026",
+    "editionNumber": "095",
+    "kind": "daily",
+    "generatedAt": "2026-11-14T12:40:06Z",
+    "timezone": "America/Toronto",
+    "postPath": "posts/2026-11-14.md",
+    "tokens": [
+      {
+        "name": "Avalanche (AVAX)",
+        "chain": null,
+        "stage": null,
+        "narrative": "Coinbase Exchange AVAX-USD closed at $8.22, -1.52% from its UTC open. The session traded between $7.99 and $8.63 on 796,841.34 AVAX of spot volume.",
+        "footprint": {
+          "accumulation": null,
+          "concentration": null
+        },
+        "watch": "Compare the next completed daily close with the observed $7.99 to $8.63 range.",
+        "source": {
+          "label": "Coinbase Exchange AVAX-USD daily candle",
+          "url": "https://api.exchange.coinbase.com/products/AVAX-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+        },
+        "market": {
+          "venue": "Coinbase Exchange",
+          "product": "AVAX-USD",
+          "open": 8.352,
+          "high": 8.628,
+          "low": 7.99,
+          "close": 8.225,
+          "baseVolume": 796841.33648336,
+          "changePct": -1.5205938697318122,
+          "windowStart": "2026-11-13T00:00:00Z",
+          "windowEnd": "2026-11-14T00:00:00Z"
+        }
+      },
+      {
+        "name": "Chainlink (LINK)",
+        "chain": null,
+        "stage": null,
+        "narrative": "Coinbase Exchange LINK-USD closed at $9.85, -2.88% from its UTC open. The session traded between $9.61 and $10.23 on 1,231,707.65 LINK of spot volume.",
+        "footprint": {
+          "accumulation": null,
+          "concentration": null
+        },
+        "watch": "Compare the next completed daily close with the observed $9.61 to $10.23 range.",
+        "source": {
+          "label": "Coinbase Exchange LINK-USD daily candle",
+          "url": "https://api.exchange.coinbase.com/products/LINK-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+        },
+        "market": {
+          "venue": "Coinbase Exchange",
+          "product": "LINK-USD",
+          "open": 10.14,
+          "high": 10.234,
+          "low": 9.614,
+          "close": 9.848,
+          "baseVolume": 1231707.65,
+          "changePct": -2.8796844181459558,
+          "windowStart": "2026-11-13T00:00:00Z",
+          "windowEnd": "2026-11-14T00:00:00Z"
+        }
+      },
+      {
+        "name": "Solana (SOL)",
+        "chain": null,
+        "stage": null,
+        "narrative": "Coinbase Exchange SOL-USD closed at $78.11, -4.30% from its UTC open. The session traded between $77.08 and $82.32 on 1,537,566.17 SOL of spot volume.",
+        "footprint": {
+          "accumulation": null,
+          "concentration": null
+        },
+        "watch": "Compare the next completed daily close with the observed $77.08 to $82.32 range.",
+        "source": {
+          "label": "Coinbase Exchange SOL-USD daily candle",
+          "url": "https://api.exchange.coinbase.com/products/SOL-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+        },
+        "market": {
+          "venue": "Coinbase Exchange",
+          "product": "SOL-USD",
+          "open": 81.62,
+          "high": 82.32,
+          "low": 77.08,
+          "close": 78.11,
+          "baseVolume": 1537566.16937181,
+          "changePct": -4.300416564567511,
+          "windowStart": "2026-11-13T00:00:00Z",
+          "windowEnd": "2026-11-14T00:00:00Z"
+        }
+      },
+      {
+        "name": "Bitcoin (BTC)",
+        "chain": null,
+        "stage": null,
+        "narrative": "Coinbase Exchange BTC-USD closed at $68,236.54, -4.39% from its UTC open. The session traded between $67,555.00 and $71,429.46 on 16,647.81 BTC of spot volume.",
+        "footprint": {
+          "accumulation": null,
+          "concentration": null
+        },
+        "watch": "Compare the next completed daily close with the observed $67,555.00 to $71,429.46 range.",
+        "source": {
+          "label": "Coinbase Exchange BTC-USD daily candle",
+          "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+        },
+        "market": {
+          "venue": "Coinbase Exchange",
+          "product": "BTC-USD",
+          "open": 71369.9,
+          "high": 71429.46,
+          "low": 67555.0,
+          "close": 68236.54,
+          "baseVolume": 16647.8102392,
+          "changePct": -4.390310200798941,
+          "windowStart": "2026-11-13T00:00:00Z",
+          "windowEnd": "2026-11-14T00:00:00Z"
+        }
+      },
+      {
+        "name": "Ethereum (ETH)",
+        "chain": null,
+        "stage": null,
+        "narrative": "Coinbase Exchange ETH-USD closed at $1,928.28, -4.41% from its UTC open. The session traded between $1,894.32 and $2,018.61 on 230,591.01 ETH of spot volume.",
+        "footprint": {
+          "accumulation": null,
+          "concentration": null
+        },
+        "watch": "Compare the next completed daily close with the observed $1,894.32 to $2,018.61 range.",
+        "source": {
+          "label": "Coinbase Exchange ETH-USD daily candle",
+          "url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+        },
+        "market": {
+          "venue": "Coinbase Exchange",
+          "product": "ETH-USD",
+          "open": 2017.26,
+          "high": 2018.61,
+          "low": 1894.32,
+          "close": 1928.28,
+          "baseVolume": 230591.01345055,
+          "changePct": -4.410933642663817,
+          "windowStart": "2026-11-13T00:00:00Z",
+          "windowEnd": "2026-11-14T00:00:00Z"
+        }
+      }
+    ],
+    "nfts": [],
+    "nftStatus": "No verified collection-level mint, sales or ownership feed was available for this edition.",
+    "gamePlan": [
+      {
+        "step": "Read the completed session",
+        "desc": "UTC session 2026-11-13. 5 of 5 tracked USD pairs had verified daily candles. The watchlist ranks the tracked pairs by open-to-close percentage change."
+      }
+    ],
+    "watchOut": [
+      {
+        "title": "Coverage and interpretation",
+        "warning": "Each candle represents one USD spot market. Wallet attribution, holder concentration, CEX net flows and broader market volume are unavailable."
+      }
+    ],
+    "news": [
+      {
+        "title": "Here’s what happened in crypto today",
+        "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph",
+        "publishedAt": "2026-11-14T11:28:12Z"
+      },
+      {
+        "title": "Microsoft confirms global outage resolved, rules out cyberattack",
+        "url": "https://cointelegraph.com/news/microsoft-365-outage-resolved-cyberattack-ruled-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph",
+        "publishedAt": "2026-11-14T10:34:06Z"
+      },
+      {
+        "title": "MegaETH parent cuts 20% of staff amid restructuring, AI push",
+        "url": "https://cointelegraph.com/news/megaeth-parent-cuts-20-percent-staff-ai-push?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph",
+        "publishedAt": "2026-11-14T08:12:30Z"
+      },
+      {
+        "title": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
+        "url": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+        "source": "Cointelegraph",
+        "publishedAt": "2026-11-14T06:33:13Z"
+      },
+      {
+        "title": "Satoshi-era wallet served in a $260 billion lawsuit moves 75 BTC it held since 2011",
+        "url": "https://www.coindesk.com/markets/2026/11/13/satoshi-era-wallet-served-in-a-usd260-billion-lawsuit-moves-75-btc-it-held-since-2011",
+        "source": "CoinDesk",
+        "publishedAt": "2026-11-14T04:30:00Z"
+      }
+    ],
+    "newsStatus": "Headlines published in the 24 hours before generation.",
+    "sources": [
+      {
+        "label": "Coinbase Exchange AVAX-USD daily candle",
+        "url": "https://api.exchange.coinbase.com/products/AVAX-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+      },
+      {
+        "label": "Coinbase Exchange LINK-USD daily candle",
+        "url": "https://api.exchange.coinbase.com/products/LINK-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+      },
+      {
+        "label": "Coinbase Exchange SOL-USD daily candle",
+        "url": "https://api.exchange.coinbase.com/products/SOL-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+      },
+      {
+        "label": "Coinbase Exchange BTC-USD daily candle",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+      },
+      {
+        "label": "Coinbase Exchange ETH-USD daily candle",
+        "url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?start=2026-11-13T00%3A00%3A00Z&end=2026-11-14T00%3A00%3A00Z&granularity=86400"
+      }
+    ]
   }
 }
