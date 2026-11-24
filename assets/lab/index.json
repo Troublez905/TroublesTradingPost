@@ -704,6 +704,50 @@
         "sha256": "3ea6ab4b3afde76eccef9ac03875ce475687d99cd213269c2b6c850925c7d3b7",
         "rule": "momentum-60-v1"
       }
+    ],
+    "2026-11-22": [
+      {
+        "venue": "Binance USD-M",
+        "symbol": "BTCUSDT",
+        "file": "2026-11-22-binance-BTCUSDT.json.gz",
+        "sha256": "da25ed6876e5f5879e4b54e728d9f8660775c7f286d347459b2c6e8c78762fad",
+        "rule": "momentum-60-v1"
+      },
+      {
+        "venue": "Binance USD-M",
+        "symbol": "ETHUSDT",
+        "file": "2026-11-22-binance-ETHUSDT.json.gz",
+        "sha256": "117d0d87929bafcff4858d1c621f0a97bf6e1632efaf11c30df41c97a111b099",
+        "rule": "momentum-60-v1"
+      },
+      {
+        "venue": "Binance USD-M",
+        "symbol": "SOLUSDT",
+        "file": "2026-11-22-binance-SOLUSDT.json.gz",
+        "sha256": "78b73de4ca7ff15a8ca6ae7101e40804b40a96368105a9cdfdd257322fdc40cc",
+        "rule": "momentum-60-v1"
+      },
+      {
+        "venue": "Bybit Linear",
+        "symbol": "BTCUSDT",
+        "file": "2026-11-22-bybit-BTCUSDT.json.gz",
+        "sha256": "41cdbffa2e82afe07e7121b931a95242cd01a7270a2af87c0d46eee19ec6713d",
+        "rule": "momentum-60-v1"
+      },
+      {
+        "venue": "Bybit Linear",
+        "symbol": "ETHUSDT",
+        "file": "2026-11-22-bybit-ETHUSDT.json.gz",
+        "sha256": "43fb654f83205148690b46e4a56fb0c38f3904610fb901d52a29bf21007eee0f",
+        "rule": "momentum-60-v1"
+      },
+      {
+        "venue": "Bybit Linear",
+        "symbol": "SOLUSDT",
+        "file": "2026-11-22-bybit-SOLUSDT.json.gz",
+        "sha256": "d2efd35af3979d5e14d9886c8c7a12d038c5afb0a071ca9b19753b4b9c908b62",
+        "rule": "momentum-60-v1"
+      }
     ]
   }
 }
